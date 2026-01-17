@@ -22,7 +22,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
  * - Digital limit switches for mechanical limits
  * - Position control for precise aiming
  */
-public class Turret extends SubsystemBase {
+public class TurretClaude extends SubsystemBase {
     private final TalonFX m_turretMotor;
     
     // Control requests
