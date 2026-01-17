@@ -54,6 +54,7 @@ public class Turret extends SubsystemBase {
     private static final double kS = 0.1; // Feedforward static gain
     private static final double kV = 0.12; // Feedforward velocity gain
 
+    // Constructor
     public Turret() {
         m_turretMotor = new TalonFX(TURRET_MOTOR_ID);
         
