@@ -6,8 +6,8 @@ Upload your individual parts of the code here
 <!--add an "x" into the brackets to mark as complete-->
 # Plans
 ## Shooter
-- [ ] Function for shooting
-    - [ ] Include velocity of shooting
+- [x] Function for shooting
+    - [x] Include velocity of shooting
 - [ ] Set angle
 - [ ] Talk tuah turrent for positioning
 - [ ] Turrent will automaticlly shoot, with an option manual controler button press
