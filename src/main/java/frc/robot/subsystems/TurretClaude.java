@@ -55,7 +55,7 @@ public class TurretClaude extends SubsystemBase {
     private static final double kV = 0.12; // Feedforward velocity gain
 
     // Constructor
-    public Turret() {
+    public TurretClaude() {
         m_turretMotor = new TalonFX(TURRET_MOTOR_ID);
         
         // Configure the motor
