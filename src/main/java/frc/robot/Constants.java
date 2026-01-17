@@ -16,12 +16,4 @@ public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
   }
-  public static class normalConstants {
-    public static double kcontrollerLeftinput = 0;
-    public static double kcontrollerRightinput = 0;
-
-    public static double rotkP = .01;
-    public static double rotkI = 0;
-    public static double rotkD = 0;
-  }
 }
