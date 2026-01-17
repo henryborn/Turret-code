@@ -14,7 +14,7 @@ Upload your individual parts of the code here
 ## Turrent Function
 - [ ] Get LimeLightdata (x,y,omega)
 - [ ] Get Omega as close to 0 as possible
-- [ ] Caleb's math for ranging
+- [x] Caleb's math for ranging
 - [ ] Set up and down movement
 - [ ] Return shooter vel.
 - [ ] Manual override
