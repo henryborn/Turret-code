@@ -19,3 +19,5 @@ Upload your individual parts of the code here
 - [ ] Return shooter vel.
 - [ ] Manual override
 - [ ] Adjust to not twist too far
+
+![yep2](https://media.discordapp.net/attachments/904839558674395167/1453211871845941350/IMG_4829.jpg?ex=696ced45&is=696b9bc5&hm=0e29b6d443fe072418fa20b9198712846ae04386fc5de4a6ef0cb6353233aba4&=&format=webp&width=960&height=960)
