@@ -2,6 +2,7 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix6.hardware.TalonFX;
 import com.ctre.phoenix6.configs.TalonFXConfiguration;
+import com.ctre.phoenix6.signals.InvertedValue;
 import com.ctre.phoenix6.signals.NeutralModeValue;
 import com.ctre.phoenix6.controls.PositionVoltage;
 import com.ctre.phoenix6.controls.DutyCycleOut;
@@ -63,7 +64,7 @@ public class TurretClaude extends SubsystemBase {
         
         // Motor output configuration
         config.MotorOutput.NeutralMode = NeutralModeValue.Brake;
-        config.MotorOutput.Inverted = false;
+        config.MotorOutput.Inverted = InvertedValue.CounterClockwise_Positive;
         
         // Current limits
         config.CurrentLimits.StatorCurrentLimit = 40;
