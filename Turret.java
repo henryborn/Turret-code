@@ -23,9 +23,4 @@ public class Turret {
         flyWheel = new SparkMax(0, MotorType.kBrushless);
 
     }
-
-
-    
-   
-
 }
