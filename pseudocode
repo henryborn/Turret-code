@@ -1,0 +1,12 @@
+import Turrent;
+private double velocity = ...
+
+CalculatePositionToAimAt() {
+    math
+    Turret.setDesiredAngle(...); //call for position
+}
+Shoot(double v) {
+    get the wheels
+    make em go really fast
+        - Use set velocity value or the doubleV
+}
