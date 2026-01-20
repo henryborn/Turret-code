@@ -20,5 +20,10 @@ public final class Constants {
     public static final double Gravity = 9.80665;
     public static final double distanceFromShooterToHubHeight = 0;
     public static final double initialVelocity = 30.5;
+
+    public static final double cameraHeight = 2;
+    public static final double cameraAngle = 1;
+    public static final double aprilTagHeight = 3;
+
   }
 }

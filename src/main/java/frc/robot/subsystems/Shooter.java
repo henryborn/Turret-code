@@ -1,6 +1,7 @@
 package frc.robot.subsystems;
 
 import frc.robot.Constants.RobotConstants;
+import frc.robot.LimelightHelpers;
 
 public class Shooter {
     /**
@@ -8,11 +9,28 @@ public class Shooter {
      * @param x Limelight ranging
      * @return the angle needed
      */
+
+    //finds distance from limelight to camera
+    public static double x(double cameraAngle, double aprilTagHeight, double cameraHeight) {
+        double verticalAngleOffset = LimelightHelpers.getTY("limelight");
+        double angleToGoal = cameraAngle + verticalAngleOffset;
+        double angleToGoalRadians = angleToGoal * (3.14159 / 180);
+
+        return (aprilTagHeight - cameraHeight) / Math.tan(angleToGoalRadians);
+
+    }
+    
     public double calebFormula(double x) {
         //set some varaibles to make my life easier
         Double g = RobotConstants.Gravity;
-        Double y = RobotConstants.distanceFromShooterToHubHeight;
         Double v = 30.5;
+        Double y = RobotConstants.distanceFromShooterToHubHeight;
         return Math.atan((x + Math.sqrt(x*x - (2*g*x) * ((y/(v*v)) + ((g*x*x)/(2*Math.pow(v, 4))))))/((g*x*x)/(v*v)));
+    }
+    //if there is no offset, then turn motors on 
+    public static void shoot(double calebFormula, double currentAngle) {
+        if (calebFormula == currentAngle) {
+            //get motor to turn on  
+        }
     }
 }

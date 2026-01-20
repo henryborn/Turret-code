@@ -1,26 +1,22 @@
 package frc.robot.subsystems;
 
+import frc.robot.subsystems.Shooter;
+
 import com.revrobotics.spark.SparkLowLevel.MotorType;
 import com.revrobotics.spark.SparkMax;
-
-import frc.robot.LimelightHelpers;
-import frc.robot.LimelightHelpers.LimelightResults;
-import frc.robot.LimelightHelpers.PoseEstimate;
 
 
 
 
 public class Turret {
+    //move to horizontal and vertical position, also we probably need PID lol
 
-    private final SparkMax xTurretMotion;
-    private final SparkMax yTurretMotion;
-    private final SparkMax flyWheel;
+    public static void xPosition(double x) {
+        
+    }
 
-    public Turret() {
-
-        xTurretMotion = new SparkMax(0, MotorType.kBrushless);
-        yTurretMotion = new SparkMax(0, MotorType.kBrushless);
-        flyWheel = new SparkMax(0, MotorType.kBrushless);
+    public static void yPosition(double calebFormula) { 
 
     }
+    
 }
