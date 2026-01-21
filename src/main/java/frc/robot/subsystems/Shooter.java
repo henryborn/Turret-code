@@ -1,7 +1,9 @@
 package frc.robot.subsystems;
 
+import edu.wpi.first.networktables.NetworkTable;
+import edu.wpi.first.networktables.NetworkTableEntry;
+import edu.wpi.first.networktables.NetworkTableInstance;
 import frc.robot.Constants.RobotConstants;
-import frc.robot.LimelightHelpers;
 
 public class Shooter {
     /**
@@ -12,7 +14,10 @@ public class Shooter {
 
     //finds distance from limelight to camera
     public static double x(double cameraAngle, double aprilTagHeight, double cameraHeight) {
-        double verticalAngleOffset = LimelightHelpers.getTY("limelight");
+
+        NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
+        NetworkTableEntry ty = table.getEntry("ty");
+        double verticalAngleOffset = ty.getDouble(0.0);
         double angleToGoal = cameraAngle + verticalAngleOffset;
         double angleToGoalRadians = angleToGoal * (3.14159 / 180);
 
