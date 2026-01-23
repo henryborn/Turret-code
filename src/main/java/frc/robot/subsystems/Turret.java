@@ -1,8 +1,12 @@
 package frc.robot.subsystems;
 
+import frc.robot.LimelightHelpers;
 import frc.robot.subsystems.Shooter;
 
 import com.revrobotics.spark.SparkLowLevel.MotorType;
+
+import java.nio.DoubleBuffer;
+
 import com.revrobotics.spark.SparkMax;
 
 import edu.wpi.first.networktables.NetworkTable;
@@ -13,23 +17,22 @@ import edu.wpi.first.networktables.NetworkTableInstance;
 
 
 public class Turret {
-    //move to horizontal and vertical position, also we probably need PID lol
+    //move robot to horizontal and vertical position
 
-    public static void xPosition(double x) {
-         NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
-        NetworkTableEntry tx = table.getEntry("tx");
-        double horizontalOffset = tx.getDouble(0.0);
+    public static double[] aimAndRange() {
+        double tx = LimelightHelpers.getTX("limelight");
+        double kP = .18; //subject to change
 
-        if (horizontalOffset != 0) {
-            //move motor to where it should be, use PID
-        }
-        
-    }
+        double angularVel = tx * kP;
 
-    public static void yPosition(double calebFormula, double verticalAngleOffset) { 
-        if (verticalAngleOffset != 0) {
-            //move motor to where it should be, use PID???
-        }
+        double[] limelightSpeeds = NetworkTableInstance.getDefault().getTable("limelight").getEntry("targetpose_cameraspace").getDoubleArray(new double[6]);
+
+        double horizontalSpeeds = limelightSpeeds[0] * kP;
+        double forwardSpeeds = limelightSpeeds[2] * kP;
+
+        double[] speeds = {horizontalSpeeds, forwardSpeeds, -angularVel};
+
+        return speeds;
 
 
     }
