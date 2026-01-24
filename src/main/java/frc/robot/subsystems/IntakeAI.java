@@ -24,7 +24,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
  * It also has a pneumatic deploy mechanism and a sensor to detect
  * if a game piece is in the intake.
  */
-public class Intake extends SubsystemBase {
+public class IntakeAI extends SubsystemBase {
     // Motor Controllers
     private final SparkMax m_intakeMotor;
     private final SparkMax m_fixedMotor;
@@ -44,7 +44,7 @@ public class Intake extends SubsystemBase {
     private static final double INTAKE_SPEED = 0.8;
     private static final double FIXED_ROLLER_SPEED = 0.6;
 
-    public Intake() {
+    public IntakeAI() {
         // Initialize intake motor
         m_intakeMotor = new SparkMax(INTAKE_MOTOR_ID, MotorType.kBrushless);
         SparkMaxConfig intakeConfig = new SparkMaxConfig();
